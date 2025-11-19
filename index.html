@@ -5,46 +5,110 @@
 <title>りうのリンク</title>
 <style>
 body {
-  font-family: "Hiragino Sans", sans-serif;
-  background: #fff5f7;
-  text-align: center;
-  padding: 50px 20px;
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: linear-gradient(180deg, #ffe9f2, #fff5f7);
+  margin: 0;
+  padding: 0;
 }
 
-/* 見出し */
-h1 {
-  font-size: 26px;
+/* 全体コンテナ */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ヘッダー部分 */
+.hero {
+  width: 100%;
+  max-width: 450px;
+  margin-top: 40px;
+  padding: 24px 18px 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(255, 143, 183, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 写真 */
+.hero-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* テキスト部分 */
+.hero-text {
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 22px;
+  font-weight: 700;
   color: #ff6fa8;
-  margin-bottom: 40px;
+  margin: 0 0 8px;
 }
 
-/* ピンクボタン */
+.hero-sub {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ボタンブロック */
+.buttons {
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* ピンクボタンを大きめに */
 .button {
   display: inline-block;
   background: #ff8fb7;
   color: white;
-  padding: 15px 35px;
-  border-radius: 50px;
+  padding: 16px 40px;
+  border-radius: 999px;
   text-decoration: none;
   font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(255, 143, 183, 0.3);
-  transition: 0.2s;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(255, 143, 183, 0.45);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .button:hover {
-  background: #ff77a4;
-  box-shadow: 0 4px 12px rgba(255, 119, 164, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 119, 164, 0.55);
 }
 </style>
 </head>
 
 <body>
-<h1>りうのリンク集</h1>
+<div class="wrapper">
 
-<a href="https://lit.link/あなたのID" class="button" target="_blank">
-  Litlinkはこちら
-</a>
+  <!-- 写真入りヘッダー -->
+  <div class="hero">
+    <img src="header.jpg" alt="りう" class="hero-img">
+    <div class="hero-text">
+      <p class="hero-title">りう / Liu</p>
+      <p class="hero-sub">
+        ねこ系・ふわかわ系。<br>
+        お仕事・ご予約などのリンクはこちらから🐾
+      </p>
+    </div>
+  </div>
 
+  <!-- ボタン -->
+  <div class="buttons">
+    <a href="https://lit.link/あなたのID" class="button" target="_blank">
+      Litlinkはこちら
+    </a>
+  </div>
+
+</div>
 </body>
 </html>
